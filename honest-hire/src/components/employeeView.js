@@ -1,13 +1,12 @@
 import React from 'react'
 import { auth } from '../firebase';
-import NavbarScreen from './Navbar/Navbar';
-// import employeeNav from './Navbar/Navbar';
+import Menu from './Menu';
 
 const employeeView = () => {
     return (
         
         <div>
-            <NavbarScreen/>
+            <Menu isInterviewee={true}/>
 
             <h1>Hello ! employee~~~~ :D</h1>
             {/* <p><button onClick={() => auth.signOut()}>signOut</button></p> */}
