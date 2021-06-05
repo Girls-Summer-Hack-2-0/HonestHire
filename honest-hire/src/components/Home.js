@@ -7,7 +7,7 @@ const Home = () => {
         <div>
             < NavbarScreen/>
             <h1>Hello ! welcome to Blind Hiring web :D</h1>
-            {/* <p><button onClick={() => auth.signOut()}>signOut</button></p> */}
+            <p><button onClick={() => auth.signOut()}>signOut</button></p>
         </div>
     )
 };
