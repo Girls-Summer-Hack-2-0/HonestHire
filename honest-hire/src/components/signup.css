@@ -37,8 +37,11 @@ img {
 
 .employee-button{
     margin-bottom: 40px;
-    width: 100%;
+    width:auto;
+    min-width: 26%;
+    padding: 5px 15px;
     height: auto;
+
 }
 
 button {

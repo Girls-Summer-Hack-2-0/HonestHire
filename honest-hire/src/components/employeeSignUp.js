@@ -37,8 +37,10 @@ const SignUp = () => {
     return (
         <div className = "container">
             <form action="">
-                <h1>Employee Sign in</h1>
+                <h1>Employee Sign in</h1> 
+                <h6>Email</h6>
                 <input ref={emailRef}type="email" />
+                <h6>Password</h6>
                 <input ref={passwordRef}type="password"/>
                 <button onClick={signIn}>Sign in</button>
                 <h6>Not yet registerd? <span onClick={signUp}className="signin_link">Sign up</span></h6>
