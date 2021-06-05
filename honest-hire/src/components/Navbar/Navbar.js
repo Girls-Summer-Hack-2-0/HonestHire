@@ -24,7 +24,7 @@ const NavbarScreen = () => {
     return (
         <nav>
             <div className = "logo">
-                LOGO
+                LOGO1
             </div>
             <ul className="menu-list">
             {navList}
