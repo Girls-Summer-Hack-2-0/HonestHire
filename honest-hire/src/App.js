@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Home from './components/Home';
 import SignUp from './pages/Signup/index';
+import SignIn from './pages/SignIn';
 import employerSignUp from './pages/Employer/Signup';
 import employeeSignUp from './pages/Employee/Signup';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -46,6 +47,7 @@ function App() {
         <Route path="/employerView" component = {employerView}/>
         <Route path="/employeeView" component = {employeeView}/>
         <Route path="/about" component = {AboutUs}/>
+        <Route path="/signIn" component = {SignIn}/>
         {/* {user ? <employerSignUp /> : <Home/>} */}
 
       </Switch>  
