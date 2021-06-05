@@ -1,7 +1,7 @@
 export const Navlist2 =[
     {
         title:"SignUp",
-        url:"/signup"
+        url:"/"
     },
     {
         title:"Login",

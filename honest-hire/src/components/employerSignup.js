@@ -34,6 +34,8 @@ const SignUp = () => {
             })
     }
 
+
+
     return (
         <div className = "container">
             <form action="">

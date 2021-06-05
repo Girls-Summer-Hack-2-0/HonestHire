@@ -1,13 +1,13 @@
 import React from 'react'
-import { EmployeeNavlist } from './EmployeeNavlist';
+import { Navlist } from './EmployeeNavlist';
 import { Navlist2 } from './Navlist2';
 import { auth } from '../../firebase';
 
 import './Navbar.css';
 import './Navlist2.css';
 
-const employeeNav = () => {
-    const navList = EmployeeNavlist.map(({ url, title }, index) => {
+const NavbarScreen = () => {
+    const navList = Navlist.map(({ url, title }, index) => {
         return(
             <li key={index}>
                 <a href={ url }>{ title }</a>
@@ -22,7 +22,12 @@ const employeeNav = () => {
             </li>
         );
     });
-    
+        // SIGN OUT
+        // logout() {
+        //     localStorage.clear();
+        //     window.location.href = '/';
+        // }
+
     return (
         <nav>
             <div className = "logo">
@@ -43,4 +48,4 @@ const employeeNav = () => {
     );
 };
 
-export default employeeNav;
+export default NavbarScreen;
