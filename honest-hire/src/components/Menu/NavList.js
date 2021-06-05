@@ -1,4 +1,4 @@
-export const Navlist =[
+export const homeNavlist =[
     {
         title: "Home",
         url:"/Home"
@@ -19,7 +19,9 @@ export const Navlist =[
         title:"Help",
         url:"/help"
     },
+    
+]
 
-
+export const employeeNavList = [
 
 ]
