@@ -1,6 +1,8 @@
 import React from 'react'
 import { Navlist } from './Navlist';
 import { Navlist2 } from './Navlist2';
+import { auth } from '../../firebase';
+
 import './Navbar.css';
 import './Navlist2.css';
 
@@ -32,6 +34,10 @@ const NavbarScreen = () => {
 
             <ul className="menu-list2">
             {navList2}
+            </ul>
+            <ul>
+            <p><button onClick={() => auth.signOut()}>signOut</button></p>
+
             </ul>
         </nav>
     );
