@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarScreen from '../Navbar/Navbar';
+import Menu from '../Menu';
 import './AboutUs.css';
 const AboutUs = () => {
 
@@ -8,7 +8,7 @@ const AboutUs = () => {
 
         
         <div className = "container">
-            < NavbarScreen/>
+            < Menu />
 
             <div className = "questions">
                 <h1>FAQs</h1>
