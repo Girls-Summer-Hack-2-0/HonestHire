@@ -19,7 +19,6 @@ export const homeNavlist =[
         title:"Help",
         url:"/help"
     },
-    
 ]
 
 export const employeeNavList = [
