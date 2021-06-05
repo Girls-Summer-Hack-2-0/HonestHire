@@ -43,7 +43,7 @@ const SignUp = () => {
                 <h6>Password</h6>
                 <input ref={passwordRef}type="password"/>
                 <button onClick={signIn}>Sign in</button>
-                <h6>Not yet registerd? <span onClick={signUp}className="signin_link">Sign up</span></h6>
+                <h6>Not yet registered? <span onClick={signUp}className="signin_link">Sign up</span></h6>
             </form>
         </div>
     )
