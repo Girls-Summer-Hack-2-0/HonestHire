@@ -1,6 +1,5 @@
 import React from 'react'
 import { auth } from '../firebase';
-//import NavbarScreen from './Navbar/';
 import Menu from './Menu';
 
 const Home = () => {
