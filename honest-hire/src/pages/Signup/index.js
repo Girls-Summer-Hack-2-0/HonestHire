@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import signUpPage from './employerSignup';
-import "./signup.css"
-import img from '../assets/iam.png';
+import Menu from '../../components/Menu';
+import "./signup.css";
+import img from '../../assets/iam.png';
 const SignUp = () => {
     return (
+        <>
+        <Menu />
         <div className = "container">
             <div className = "top-container">
                 <img src={img} width='400' height='400'></img>
@@ -25,6 +27,7 @@ const SignUp = () => {
                     </div>
                 </div>
         </div>
+        </>
     )
 }
 

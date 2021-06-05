@@ -1,15 +1,16 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import NavbarScreen from './components/Navbar/Navbar';
 import Home from './components/Home';
-import SignUp from './components/signUp';
-import employerSignUp from './components/employerSignup';
-import employeeSignUp from './components/employeeSignUp';
+import SignUp from './pages/Signup/index';
+import employerSignUp from './pages/Employer/Signup';
+import employeeSignUp from './pages/Employee/Signup';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { auth } from './firebase';
 import employerView from './components/employerView';
 import employeeView from './components/employeeView';
 import AboutUs from './components/FAQ/AboutUs';
+import { ThemeProvider } from '@material-ui/styles';
+import { theme }  from './theme.js';
 
 
 function App() {
@@ -33,8 +34,8 @@ function App() {
 
   return (
     <div className ="container">
+      <ThemeProvider theme={theme}>
       <Router>
-        {/* <NavbarScreen/> */}
         {/* {user ? <employerSignUp /> : <Home/>} */}
 
       <Switch>
@@ -49,7 +50,7 @@ function App() {
 
       </Switch>  
       </Router>
-
+      </ThemeProvider>
     </div>
   );
 }
