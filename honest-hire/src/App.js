@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { auth } from './firebase';
 import employerView from './components/employerView';
 import employeeView from './components/employeeView';
+import AboutUs from './components/FAQ/AboutUs';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path="/employeeSignUp" component = {employeeSignUp}/>
         <Route path="/employerView" component = {employerView}/>
         <Route path="/employeeView" component = {employeeView}/>
+        <Route path="/about" component = {AboutUs}/>
         {/* {user ? <employerSignUp /> : <Home/>} */}
 
       </Switch>  
