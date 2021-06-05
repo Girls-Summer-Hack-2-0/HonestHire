@@ -21,6 +21,7 @@ export default function Menu({ isEmployer, isInterviewee }) {
           {isEmployer && <navList /> && <Avatar edge="end">H</Avatar>}
           {!isEmployer && !isInterviewee && homeList
         }
+        {isInterviewee && <navList />}
       </Toolbar>
     </AppBar>
     </>);
