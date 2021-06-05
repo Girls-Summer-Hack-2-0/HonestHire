@@ -33,20 +33,21 @@ function App() {
   return (
     <div className ="container">
       <Router>
-        <NavbarScreen/>
-        {/* {user ? <Home /> : <employerSignUp/>} */}
+        {/* <NavbarScreen/> */}
+        {/* {user ? <employerSignUp /> : <Home/>} */}
 
       <Switch>
-        <Route exact path="/" component = {Home} />
-        <Route path="/signup" component = {SignUp} />
+        <Route exact path="/" component = {SignUp} />
+        <Route path="/Home" component = {Home} />
         <Route path="/employerSignUp" component = {employerSignUp}/>
         <Route path="/employeeSignUp" component = {employeeSignUp}/>
         <Route path="/employerView" component = {employerView}/>
         <Route path="/employeeView" component = {employeeView}/>
+        {/* {user ? <employerSignUp /> : <Home/>} */}
 
       </Switch>  
       </Router>
-      
+
     </div>
   );
 }
