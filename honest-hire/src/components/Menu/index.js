@@ -31,7 +31,7 @@ export default function Menu({ isEmployer, isInterviewee }) {
             <>
               {homeList}
               <Button href={"/signIn"}> Sign In </Button>
-              <Button href={"/employeeSignUp"}> Sign Up </Button>
+              <Button href={"/signUp"}> Sign Up </Button>
             </>
           )}
           {(isInterviewee || isEmployer) && (

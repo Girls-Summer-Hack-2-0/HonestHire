@@ -40,7 +40,7 @@ function App() {
         {/* {user ? <employerSignUp /> : <Home/>} */}
 
       <Switch>
-        <Route exact path="/" component = {SignUp} />
+        <Route exact path="/" component = {Home} />
         <Route path="/Home" component = {Home} />
         <Route path="/employerSignUp" component = {employerSignUp}/>
         <Route path="/employeeSignUp" component = {employeeSignUp}/>
@@ -48,6 +48,7 @@ function App() {
         <Route path="/employeeView" component = {employeeView}/>
         <Route path="/about" component = {AboutUs}/>
         <Route path="/signIn" component = {SignIn}/>
+        <Route path="/signUp" component = {SignUp} />
         {/* {user ? <employerSignUp /> : <Home/>} */}
 
       </Switch>  
