@@ -20,10 +20,44 @@ function SignIn() {
   const passwordRef = useRef(null);
   const history = useHistory();
 
+//   .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+//   .then(() => {
+//   return firebase.auth().signInWithEmailAndPassword(email, password);
+//   })
+//   .catch((error) => {
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//   });
+// const signIn = (e) => {
+//   e.preventDefault();
+//   auth
+//     .signInWithEmailAndPassword(
+//       emailRef.current.value,
+//       passwordRef.current.value
+//     )
+//     .then((user) => {
+//       console.log(user);
+//       db
+//         .collection("recruiters")
+//         .where("email", "==", emailRef.current.value)
+//         .get()
+//         .then((querySnapshot) => {
+//           querySnapshot ?
+//             history.push("/employerView") : history.push("/employeeView");
+//         })
+//         .catch((e) => console.log(e));
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };  
+
+
   const signIn = (e) => {
     e.preventDefault();
-    auth
-      .signInWithEmailAndPassword(
+    auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
+   .then(() => {
+      return auth.signInWithEmailAndPassword(
         emailRef.current.value,
         passwordRef.current.value
       )
@@ -41,8 +75,13 @@ function SignIn() {
       })
       .catch((err) => {
         console.log(err);
-      });
+      })
+    }).catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
   };
+
   return (
     <div className="container">
       <Menu />
@@ -69,6 +108,6 @@ function SignIn() {
       </form>
     </div>
   );
-}
+  }
 
 export default SignIn;
