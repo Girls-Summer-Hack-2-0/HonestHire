@@ -23,5 +23,12 @@ export const homeNavlist =[
 ]
 
 export const employeeNavList = [
-
+    {
+        title: "Home",
+        url:"/Home"
+    },
+    {
+        title:"Help",
+        url:"/help"
+    },
 ]

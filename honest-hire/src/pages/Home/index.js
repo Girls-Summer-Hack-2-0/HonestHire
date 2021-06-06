@@ -31,7 +31,7 @@ const Home = () => {
     <div>
       <Menu />
       <br></br>
-      <img src={img} width='600' height='600'></img>
+      <img src={img} />
       <h1>Hello ! welcome to Blind Hiring web :D</h1>
       <p>{companyName}</p>
     </div>

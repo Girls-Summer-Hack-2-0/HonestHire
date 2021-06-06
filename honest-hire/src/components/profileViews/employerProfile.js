@@ -13,18 +13,15 @@ const EmployerProfile = () => {
           const email = auth.currentUser?.email;
           console.log(email);
           await db
-            .collection("users")
+            .collection("recruiters")
             .where("email", "==", email)
             .get()
             .then((querySnapshot) => {
               querySnapshot.forEach((doc) => {
                 console.log(doc.id, " => ", doc.data());
-
                 setName(doc.data().name);
                 setEmail(doc.data().email);
                 setCompany(doc.data().company);
-
-
               });
             })
             .catch((e) => console.log(e));
@@ -40,12 +37,6 @@ const EmployerProfile = () => {
             <p>name: {name}</p>
             <p>email: {email}</p>
             <p>company: {company}</p>
-
-
-            <p>
-                <button onClick={() => auth.signOut()}>signOut</button>
-            </p>
-
         </div>
     )
 }
