@@ -1,6 +1,6 @@
 import React from 'react'
-import { auth } from '../firebase';
-import Menu from './Menu';
+import { auth } from '../../../firebase';
+import Menu from '../../../components/Menu';
 
 const employerView = () => {
     return (
