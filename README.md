@@ -4,6 +4,7 @@ Creating a platform where employers can avoid gender biases while searching for 
 Use `yarn start` to test the app
 
 * This frontend was created with React
+* Firebase database
 
 
 # FAQs
