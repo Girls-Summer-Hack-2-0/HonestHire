@@ -2,11 +2,23 @@ import React, { useRef } from "react";
 import Menu from "../../components/Menu";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { auth } from "../../firebase";
+import { styled } from "@material-ui/core/styles";
+import db, { auth } from "../../firebase";
+import { Link, useHistory } from "react-router-dom";
 
-const SignIn = () => {
+const StyledTextInput = styled(TextField)({
+  margin: 10,
+});
+
+const StyledButton = styled(Button)({
+  marginLeft: 'auto',
+  marginRight: 'auto'
+});
+
+function SignIn() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+  const history = useHistory();
 
   const signIn = (e) => {
     e.preventDefault();
@@ -17,26 +29,46 @@ const SignIn = () => {
       )
       .then((user) => {
         console.log(user);
+        db
+          .collection("recruiters")
+          .where("email", "==", emailRef.current.value)
+          .get()
+          .then((querySnapshot) => {
+            querySnapshot ?
+              history.push("/employerView") : history.push("/employeeView");
+          })
+          .catch((e) => console.log(e));
       })
       .catch((err) => {
         console.log(err);
       });
   };
   return (
-    <>
+    <div className="container">
       <Menu />
-      <h1>Hello again!</h1>
-        <TextField id="email-field" label="Email" variant="outlined" autoComplete="email" ref={emailRef} />
-        <TextField
+      <form action="">
+        <h1>Hello again!</h1>
+        <StyledTextInput
+          id="email-field"
+          label="Email"
+          variant="outlined"
+          autoComplete="email"
+          inputRef={emailRef}
+        />
+        <StyledTextInput
           id="password-field"
           label="Password"
           type="password"
           autoComplete="current-password"
           variant="outlined"
+          inputRef={passwordRef}
         />
-        <Button onClick={signIn}>Sign In</Button>
-    </>
+        <StyledButton onClick={signIn} variant="contained" color="primary">
+          Sign In
+      </StyledButton>
+      </form>
+    </div>
   );
-};
+}
 
 export default SignIn;

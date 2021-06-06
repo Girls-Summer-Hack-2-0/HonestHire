@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Home from './components/Home';
+import Home from './pages/Home';
 import SignUp from './pages/Signup/index';
 import SignIn from './pages/SignIn';
 import employerSignUp from './pages/Employer/Signup';
